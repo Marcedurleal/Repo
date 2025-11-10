@@ -69,7 +69,7 @@ if pqr_file and cartera_file and parq_file:
     def assign_park(row):
         if row["cal_cartera"] > 0 and row["juridico"] != "N":
             return "Revisar Acuerdo pago"
-        elif row["cal_cartera"] > 0 and row["juridico"] == "N":
+        elif row["cal_cartera"] > 10000 and row["juridico"] == "N":
             return "No"
         else:
             return "Si"
@@ -142,4 +142,5 @@ if pqr_file and cartera_file and parq_file:
     )
 else:
     st.info("Por favor, sube los tres archivos para comenzar el procesamiento.")
+
 
