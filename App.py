@@ -3,7 +3,7 @@ import pandas as pd
 from io import BytesIO
 
 st.set_page_config(page_title="Cruces de archivos Excel", layout="wide")
-st.title("📊 Cruce automático de archivos Excel")
+st.title("📊 Cruce automático de archivos para parqueaderos")
 st.write("Sube los tres archivos: **PQR.xlsx**, **CARTERA.xlsx** y **PARQ_ASIGNADOS.xlsx**, y el sistema realizará los cruces automáticamente.")
 
 # === PASO 1: CARGA DE ARCHIVOS ===
