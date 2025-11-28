@@ -128,7 +128,7 @@ if pqr_file and cartera_file and parq_file:
 
     # Filtrar columnas específicas (asegúrate de que existan)
     cols = ['Codigo', 'Fecha', 'Estado', 'Respuesta', 'Destino', 'PlacaMoto', 'PlacaCarro', 'Color','SheetName','propietari','saldo','cuotaparqu','vrcuota','moto','bicicleter','juridico','cal_cartera','Asignar_Park','Num_parq','Tipo_parq']
-    existing_cols = [c for c in cols if c in df_cartera_sheet.columns]
+    existing_cols = [c for c in cols if c in dfpqr_filtered.columns]
     dfpqr_filtered = dfpqr_filtered[existing_cols + ['SheetName']]
     dfpqr_filtered.append(df_cartera_filtered_sheet)
 
@@ -149,6 +149,7 @@ if pqr_file and cartera_file and parq_file:
     )
 else:
     st.info("Por favor, sube los tres archivos para comenzar el procesamiento.")
+
 
 
 
